@@ -16,10 +16,12 @@ import { MaintenanceDashboard } from './steps/maintenance-dashboard';
 import { CardContainer } from '../ui/card-container';
 import { InteractiveButton } from '../ui/interactive-button';
 import { Box, Flex } from '@radix-ui/themes';
+import { v4 as uuidv4 } from 'uuid';
 
 export function ProjectWizard() {
   const { theme, setTheme } = useTheme();
   const [activeTab, setActiveTab] = useState(tabs[0].value);
+  const [projectId] = useState(() => uuidv4());
 
   // Find the active component
   const ActiveComponent = tabs.find((tab) => tab.value === activeTab)?.component || tabs[0].component;
@@ -63,7 +65,7 @@ export function ProjectWizard() {
             className='space-y-4'>
             <Tabs.Content value={activeTab} className='outline-none'>
               <CardContainer>
-                <ActiveComponent />
+                <ActiveComponent projectId={projectId} />
               </CardContainer>
             </Tabs.Content>
           </motion.div>
