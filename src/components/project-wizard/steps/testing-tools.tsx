@@ -3,6 +3,7 @@
 import { Button, Card, Text, TextArea, TextField, Select } from '@radix-ui/themes';
 import { useState } from 'react';
 import { useCompletion } from 'ai/react';
+import { MarkdownContent } from '@/components/ui/markdown-content';
 
 interface TestCase {
   id: string;
@@ -103,7 +104,7 @@ export function TestingTools() {
             <div className='space-y-2'>
               <Text weight='bold'>AI Suggestions</Text>
               <Card className='p-4 bg-muted'>
-                <Text>{completion}</Text>
+                <MarkdownContent content={completion} />
               </Card>
             </div>
           )}

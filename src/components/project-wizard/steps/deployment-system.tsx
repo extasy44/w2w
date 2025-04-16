@@ -3,6 +3,7 @@
 import { Button, Card, Text, TextField, Select } from '@radix-ui/themes';
 import { useState } from 'react';
 import { useCompletion } from 'ai/react';
+import { MarkdownContent } from '@/components/ui/markdown-content';
 
 interface DeploymentConfig {
   id: string;
@@ -127,7 +128,7 @@ export function DeploymentSystem() {
             <div className='space-y-2'>
               <Text weight='bold'>Deployment Suggestions</Text>
               <Card className='p-4 bg-muted'>
-                <Text>{completion}</Text>
+                <MarkdownContent content={completion} />
               </Card>
             </div>
           )}

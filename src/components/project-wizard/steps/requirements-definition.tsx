@@ -3,6 +3,7 @@
 import { Button, Card, Text, TextArea, TextField } from '@radix-ui/themes';
 import { useState } from 'react';
 import { useCompletion } from 'ai/react';
+import { MarkdownContent } from '@/components/ui/markdown-content';
 
 interface Requirement {
   id: string;
@@ -99,7 +100,7 @@ export function RequirementsDefinition() {
           <div className='space-y-2'>
             <Text weight='bold'>AI Suggestions</Text>
             <Card className='p-4 bg-muted'>
-              <Text>{completion}</Text>
+              <MarkdownContent content={completion} />
             </Card>
           </div>
         )}

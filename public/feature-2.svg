@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#F8FAFC"/>
+  
+  <!-- Deployment Pipeline -->
+  <rect x="40" y="40" width="320" height="220" rx="8" fill="white" stroke="#E2E8F0" stroke-width="2"/>
+  
+  <!-- Pipeline Steps -->
+  <circle cx="80" cy="100" r="20" fill="#F1F5F9" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M120 100L160 100" stroke="#94A3B8" stroke-width="2"/>
+  
+  <circle cx="200" cy="100" r="20" fill="#F1F5F9" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M240 100L280 100" stroke="#94A3B8" stroke-width="2"/>
+  
+  <circle cx="320" cy="100" r="20" fill="#F1F5F9" stroke="#94A3B8" stroke-width="2"/>
+  
+  <!-- Status Bars -->
+  <rect x="60" y="160" width="280" height="16" rx="8" fill="#F1F5F9"/>
+  <rect x="60" y="160" width="240" height="16" rx="8" fill="#10B981"/>
+  
+  <rect x="60" y="190" width="280" height="16" rx="8" fill="#F1F5F9"/>
+  <rect x="60" y="190" width="200" height="16" rx="8" fill="#10B981"/>
+</svg> 

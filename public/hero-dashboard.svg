@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="600" fill="#F8FAFC"/>
+  <rect x="40" y="40" width="1120" height="520" rx="12" fill="white" stroke="#E2E8F0" stroke-width="2"/>
+  
+  <!-- Sidebar -->
+  <rect x="40" y="40" width="240" height="520" fill="#F1F5F9" rx="12"/>
+  <rect x="64" y="72" width="192" height="32" rx="6" fill="#E2E8F0"/>
+  <rect x="64" y="120" width="192" height="24" rx="4" fill="#E2E8F0"/>
+  <rect x="64" y="156" width="192" height="24" rx="4" fill="#E2E8F0"/>
+  <rect x="64" y="192" width="192" height="24" rx="4" fill="#E2E8F0"/>
+  
+  <!-- Main Content -->
+  <rect x="312" y="72" width="400" height="40" rx="6" fill="#E2E8F0"/>
+  <rect x="312" y="136" width="800" height="160" rx="8" fill="#F1F5F9"/>
+  <rect x="312" y="320" width="384" height="200" rx="8" fill="#F1F5F9"/>
+  <rect x="728" y="320" width="384" height="200" rx="8" fill="#F1F5F9"/>
+</svg> 
