@@ -47,6 +47,7 @@ export function DesignPhase() {
           <Text size='5' weight='bold'>
             Design Phase
           </Text>
+          <br />
           <Text color='gray'>Define the visual style and user experience of your application.</Text>
         </div>
 

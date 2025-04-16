@@ -55,6 +55,7 @@ export function DeploymentSystem() {
           <Text size='5' weight='bold'>
             Deployment System
           </Text>
+          <br />
           <Text color='gray'>Configure and manage your application deployments.</Text>
         </div>
 
@@ -64,7 +65,7 @@ export function DeploymentSystem() {
               Platform
             </Text>
             <Select.Root value={currentConfig.platform} onValueChange={handlePlatformSelect}>
-              <Select.Trigger />
+              <Select.Trigger className='w-full' />
               <Select.Content>
                 {PLATFORMS.map((platform) => (
                   <Select.Item key={platform} value={platform}>
@@ -82,7 +83,7 @@ export function DeploymentSystem() {
             <Select.Root
               value={currentConfig.environment}
               onValueChange={(env) => setCurrentConfig((prev) => ({ ...prev, environment: env }))}>
-              <Select.Trigger />
+              <Select.Trigger className='w-full' />
               <Select.Content>
                 {ENVIRONMENTS.map((env) => (
                   <Select.Item key={env} value={env}>
@@ -98,7 +99,7 @@ export function DeploymentSystem() {
               Region
             </Text>
             <Select.Root value={currentConfig.region} onValueChange={(region) => setCurrentConfig((prev) => ({ ...prev, region }))}>
-              <Select.Trigger />
+              <Select.Trigger className='w-full' />
               <Select.Content>
                 {REGIONS.map((region) => (
                   <Select.Item key={region} value={region}>

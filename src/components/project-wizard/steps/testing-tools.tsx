@@ -64,7 +64,7 @@ export function TestingTools() {
               Test Type
             </Text>
             <Select.Root value={currentTest.type} onValueChange={handleTestTypeSelect}>
-              <Select.Trigger />
+              <Select.Trigger className='w-full' />
               <Select.Content>
                 {TEST_TYPES.map((type) => (
                   <Select.Item key={type} value={type}>

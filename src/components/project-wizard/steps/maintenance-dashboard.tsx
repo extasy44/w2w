@@ -79,6 +79,7 @@ export function MaintenanceDashboard() {
           <Text size='5' weight='bold'>
             Maintenance Dashboard
           </Text>
+          <br />
           <Text color='gray'>Monitor and maintain your application's health and user feedback.</Text>
         </div>
 
@@ -106,7 +107,7 @@ export function MaintenanceDashboard() {
                   Metric Type
                 </Text>
                 <Select.Root value={currentMetric.type} onValueChange={(type) => setCurrentMetric((prev) => ({ ...prev, type }))}>
-                  <Select.Trigger />
+                  <Select.Trigger className='w-full' />
                   <Select.Content>
                     {METRIC_TYPES.map((type) => (
                       <Select.Item key={type} value={type}>
@@ -167,7 +168,7 @@ export function MaintenanceDashboard() {
                 Feedback Type
               </Text>
               <Select.Root value={currentFeedback.type} onValueChange={(type) => setCurrentFeedback((prev) => ({ ...prev, type }))}>
-                <Select.Trigger />
+                <Select.Trigger className='w-full' />
                 <Select.Content>
                   {FEEDBACK_TYPES.map((type) => (
                     <Select.Item key={type} value={type}>

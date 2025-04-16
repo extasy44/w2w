@@ -23,6 +23,7 @@ export function IdeaCapture() {
           <Text as='label' size='2' weight='bold'>
             App Name
           </Text>
+          <br />
           <TextField.Root>
             <TextField.Input placeholder='Enter your app name' value={appName} onChange={(e) => setAppName(e.target.value)} />
           </TextField.Root>

@@ -61,7 +61,7 @@ export function TechnologySelection() {
               Category
             </Text>
             <Select.Root value={currentCategory} onValueChange={handleCategoryChange}>
-              <Select.Trigger />
+              <Select.Trigger className='w-full' />
               <Select.Content>
                 {TECH_CATEGORIES.map((category) => (
                   <Select.Item key={category} value={category}>

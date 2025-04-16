@@ -47,6 +47,7 @@ export function RequirementsDefinition() {
           <Text size='5' weight='bold'>
             Requirements Definition
           </Text>
+          <br />
           <Text color='gray'>Define the core requirements and features of your application.</Text>
         </div>
 
