@@ -4,9 +4,9 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Theme } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
-import { Header } from '@/components/header';
 import { Toaster } from '@/components/ui/toast';
-
+import { Footer } from '@/components/footer';
+import { AutoSuggestProvider } from '@/contexts/auto-suggest-context';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -19,11 +19,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en' suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
-          <Theme accentColor='amber' grayColor='sand' radius='medium' scaling='95%'>
-            <Header />
-            {children}
-            <Toaster />
-          </Theme>
+          <AutoSuggestProvider>
+            <Theme accentColor='amber' grayColor='sand' radius='medium' scaling='95%'>
+              {children}
+              <Footer />
+              <Toaster />
+            </Theme>
+          </AutoSuggestProvider>
         </ThemeProvider>
       </body>
     </html>

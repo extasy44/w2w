@@ -19,7 +19,6 @@ import { Box, Flex } from '@radix-ui/themes';
 import { v4 as uuidv4 } from 'uuid';
 
 export function ProjectWizard() {
-  const { theme, setTheme } = useTheme();
   const [activeTab, setActiveTab] = useState(tabs[0].value);
   const [projectId] = useState(() => uuidv4());
 
@@ -30,13 +29,6 @@ export function ProjectWizard() {
     <Box className='max-w-6xl mx-auto p-4'>
       <Flex justify='between' align='center' mb='4'>
         <h1 className='text-2xl font-semibold'>Project Wizard</h1>
-        <InteractiveButton
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          className='rounded-full w-10 h-10 bg-transparent hover:bg-muted flex items-center justify-center relative'>
-          <Sun className='h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
-          <Moon className='absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
-          <span className='sr-only'>Toggle theme</span>
-        </InteractiveButton>
       </Flex>
 
       <Tabs.Root defaultValue='idea' className='w-full' onValueChange={setActiveTab}>
