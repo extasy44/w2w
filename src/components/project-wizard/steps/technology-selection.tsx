@@ -3,6 +3,7 @@
 import { Button, Card, Text, Select } from '@radix-ui/themes';
 import { useState } from 'react';
 import { useCompletion } from 'ai/react';
+import { MarkdownContent } from '@/components/ui/markdown-content';
 
 interface Technology {
   id: string;
@@ -52,6 +53,7 @@ export function TechnologySelection() {
           <Text size='5' weight='bold'>
             Technology Selection
           </Text>
+          <br />
           <Text color='gray'>Choose the technologies that will power your application.</Text>
         </div>
 
@@ -73,11 +75,11 @@ export function TechnologySelection() {
           </div>
 
           {completion && (
-            <div className='space-y-2'>
-              <Text weight='bold'>Recommended Technologies</Text>
-              <Card className='p-4 bg-muted'>
-                <Text>{completion}</Text>
-              </Card>
+            <div className='space-y-3'>
+              <Text weight='bold' size='3'>
+                Recommended Technologies
+              </Text>
+              <MarkdownContent content={completion} />
             </div>
           )}
         </div>
@@ -91,9 +93,7 @@ export function TechnologySelection() {
                   <div className='space-y-2'>
                     <Text weight='bold'>{tech.category}</Text>
                     <Text>{tech.name}</Text>
-                    <Text color='gray' size='2'>
-                      {tech.description}
-                    </Text>
+                    <MarkdownContent content={tech.description} className='mt-2' />
                   </div>
                 </Card>
               ))}
